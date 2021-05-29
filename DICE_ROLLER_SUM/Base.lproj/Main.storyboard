@@ -1,24 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DICE_ROLLER_SUM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="table" translatesAutoresizingMaskIntoConstraints="NO" id="WH3-t0-7Sg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Dyu-lR-fd1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="THE SUM IS :  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grb-Wa-qD1">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="287.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="248" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="l4w-TC-DkX">
+                                        <rect key="frame" x="0.0" y="287.5" width="414" height="287"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice5" translatesAutoresizingMaskIntoConstraints="NO" id="nrA-EN-Paj">
+                                                <rect key="frame" x="0.0" y="0.0" width="202" height="287"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice6" translatesAutoresizingMaskIntoConstraints="NO" id="h2K-UG-EpH">
+                                                <rect key="frame" x="212" y="0.0" width="202" height="287"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3i-8n-xDO">
+                                        <rect key="frame" x="0.0" y="574.5" width="414" height="287.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
+                                        <state key="normal" title="ROLL" image="Roll">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fes-eW-7f3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WH3-t0-7Sg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="427-pB-LCf"/>
+                            <constraint firstItem="Dyu-lR-fd1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="F5y-UF-TDJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Dyu-lR-fd1" secondAttribute="bottom" id="M3T-xM-mS2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dyu-lR-fd1" secondAttribute="trailing" id="N4T-zp-jkg"/>
+                            <constraint firstItem="Dyu-lR-fd1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QQP-fk-jz2"/>
+                            <constraint firstItem="WH3-t0-7Sg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VRl-dF-7rx"/>
+                            <constraint firstAttribute="trailing" secondItem="WH3-t0-7Sg" secondAttribute="trailing" id="eut-so-KAJ"/>
+                            <constraint firstAttribute="bottom" secondItem="WH3-t0-7Sg" secondAttribute="bottom" id="jDv-tF-F3s"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="Grb-Wa-qD1" id="jBq-fG-QKG"/>
+                        <outlet property="left" destination="nrA-EN-Paj" id="Lum-Vs-yMa"/>
+                        <outlet property="right" destination="h2K-UG-EpH" id="jsP-5W-16N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-16" y="72"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Dice5" width="99" height="98"/>
+        <image name="Dice6" width="99" height="98"/>
+        <image name="Roll" width="32" height="32"/>
+        <image name="table" width="414" height="736"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
